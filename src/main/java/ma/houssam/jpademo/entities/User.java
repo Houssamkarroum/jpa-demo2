@@ -7,18 +7,22 @@ import lombok.NoArgsConstructor;
 
 import java.util.ArrayList;
 import java.util.List;
-@Data @NoArgsConstructor @AllArgsConstructor
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
-@Table(name="USERS")
+@Table(name = "USERS")
 public class User {
     @Id
+    @Column(name = "USER_ID", nullable = false, updatable = false, length = 36)
     private String userId;
-    @Column(name = "USER_NAME", unique=true,length = 20)
+
+    @Column(name = "USER_NAME", unique = true, nullable = false, length = 20)
     private String username;
+
+    @Column(name = "PASSWORD", nullable = false)
     private String password;
-    //quand on choisi pour l'attribut fetch EAGER cela nous permet a chaque fois on charge un user on charge ave lui les roles
-    //par defaut si on mode lazy
-    //si on a choisi EAGER il faut initialiser la variable pour ne pas avoir une exception NULLPOINTEREXCPTION
-    @ManyToMany(mappedBy = "users",fetch = FetchType.EAGER)
-    private List<Role> roles=new ArrayList<>();
+
+    @ManyToMany(mappedBy = "users", fetch = FetchType.EAGER)
+    private List<Role> roles = new ArrayList<>();
 }
