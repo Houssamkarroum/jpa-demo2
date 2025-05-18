@@ -1,6 +1,6 @@
-package ma.abdellah.jpademo.repositories;
+package ma.houssam.jpademo.repositories;
 
-import ma.abdellah.jpademo.entities.Role;
+import ma.houssam.jpademo.entities.Role;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

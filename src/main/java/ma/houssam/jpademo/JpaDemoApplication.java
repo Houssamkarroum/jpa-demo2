@@ -1,8 +1,8 @@
-package ma.abdellah.jpademo;
+package ma.houssam.jpademo;
 
-import ma.abdellah.jpademo.entities.Role;
-import ma.abdellah.jpademo.entities.User;
-import ma.abdellah.jpademo.service.UserService;
+import ma.houssam.jpademo.entities.Role;
+import ma.houssam.jpademo.entities.User;
+import ma.houssam.jpademo.service.UserService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

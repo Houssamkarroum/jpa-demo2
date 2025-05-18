@@ -1,4 +1,4 @@
-package ma.abdellah.jpademo.entities;
+package ma.houssam.jpademo.entities;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;

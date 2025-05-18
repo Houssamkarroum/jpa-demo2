@@ -1,4 +1,4 @@
-package ma.abdellah.jpademo.entities;
+package ma.houssam.jpademo.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

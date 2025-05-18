@@ -1,10 +1,10 @@
-package ma.abdellah.jpademo.service;
+package ma.houssam.jpademo.service;
 
 import lombok.AllArgsConstructor;
-import ma.abdellah.jpademo.entities.Role;
-import ma.abdellah.jpademo.entities.User;
-import ma.abdellah.jpademo.repositories.RoleRepository;
-import ma.abdellah.jpademo.repositories.UserRepository;
+import ma.houssam.jpademo.entities.Role;
+import ma.houssam.jpademo.entities.User;
+import ma.houssam.jpademo.repositories.RoleRepository;
+import ma.houssam.jpademo.repositories.UserRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

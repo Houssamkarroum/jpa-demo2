@@ -1,7 +1,7 @@
-package ma.abdellah.jpademo.service;
+package ma.houssam.jpademo.service;
 
-import ma.abdellah.jpademo.entities.Role;
-import ma.abdellah.jpademo.entities.User;
+import ma.houssam.jpademo.entities.Role;
+import ma.houssam.jpademo.entities.User;
 
 public interface UserService {
     User addNewUser(User user);
