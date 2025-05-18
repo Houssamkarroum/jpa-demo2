@@ -11,18 +11,27 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Data @NoArgsConstructor @AllArgsConstructor
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Role {
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long Id;
-    @Column(name = "DESCRIPTION")
-    private String desc;
-    @Column(unique = true,length = 20)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(name = "description", nullable = false, length = 255)
+    private String description;
+
+    @Column(name = "role_name", unique = true, length = 20, nullable = false)
     private String roleName;
-    @ManyToMany(fetch = FetchType.EAGER)
-    //pour specifie le nom de la table qui resulte a cause de la relation ManyToMany
-    //@JoinTable(name = "USERS_ROLES")
+
+    @ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable(
+        name = "users_roles",
+        joinColumns = @JoinColumn(name = "role_id"),
+        inverseJoinColumns = @JoinColumn(name = "user_id")
+    )
     @ToString.Exclude
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
-    private List<User> users=new ArrayList<>();
+    private List<User> users = new ArrayList<>();
 }
